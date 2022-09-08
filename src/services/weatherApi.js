@@ -15,7 +15,7 @@ export const getUsersClientAddress = async (userLocation, setGetAddressLoading, 
 export const getWeatherByLocation = async (userLocation, setGetWeatherLoading, setLocalWeather) => {
   if (userLocation) {
     setGetWeatherLoading(true)
-    await fetch(`${process.env.REACT_APP_WEATHER_API}&lat=${userLocation.lat}&lon=${userLocation.lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+    await fetch(`${process.env.REACT_APP_WEATHER_API}&lat=${userLocation.lat}&lon=${userLocation.lon}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
       .then(res => res.json())
       .then(data => {
         setLocalWeather(data);

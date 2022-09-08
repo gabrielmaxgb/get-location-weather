@@ -53,10 +53,10 @@ function Weather() {
                       target[index] = key;
                       return target;
                     }, {})[0].description}</span></span>
-                <span>Temperature: <span>{localWeather?.main?.temp} K</span></span>
-                <span>Feels like: <span>{localWeather?.main?.feels_like} K</span></span>
-                <span>Max. Temp.: <span>{localWeather?.main?.temp_max} K</span></span>
-                <span>Min. Temp.: <span>{localWeather?.main?.temp_min} K</span></span>
+                <span>Temperature: <span>{localWeather?.main?.temp} °C</span></span>
+                <span>Feels like: <span>{localWeather?.main?.feels_like} °C</span></span>
+                <span>Max. Temp.: <span>{localWeather?.main?.temp_max} °C</span></span>
+                <span>Min. Temp.: <span>{localWeather?.main?.temp_min} °C</span></span>
                 <span>Humidity: <span>{localWeather?.main?.humidity} %</span></span>
                 <span>Pressure: <span>{localWeather?.main?.pressure} hPa</span></span>
               </WeatherPaper>
