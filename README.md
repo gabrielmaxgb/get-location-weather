@@ -1,4 +1,6 @@
-# Running
+# GET LOCATION WEATHER
+
+## Running
 
 ``$ git clone https://github.com/gabrielmaxgb/get-location-weather.git ``  
 ``$ yarn``   
