@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import Header from "./components/header/Header";
-import LocalWeatherInfo from "./pages/localWeatherInfo/LocalWeatherInfo";
+import Weather from "./pages/localWeatherInfo/Weather";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Header />
       <Container as="main" maxWidth="xlg">
         {/* <Routes /> */}
-        <LocalWeatherInfo />
+        <Weather />
       </Container>
     </>
   );
