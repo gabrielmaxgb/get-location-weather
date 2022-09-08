@@ -1,11 +1,14 @@
 import { Grid } from '@mui/material'
 import React, { useEffect } from 'react'
 import DefaultLoading from '../../components/defaultLoading/DefaultLoading';
+import RetrievingLocation from '../../components/retrievingLocation/RetrievingLocation';
 import { getUsersClientAddress, getWeatherByLocation } from '../../services/weatherApi';
 import { UpdateDataButton, WeatherPaper } from './WeatherStyles';
 
 function Weather() {
   const [userLocation, setUserLocation] = React.useState();
+  console.log("userLocation")
+  console.log(userLocation)
   const [localWeather, setLocalWeather] = React.useState({});
   const [getWeatherLoading, setGetWeatherLoading] = React.useState(false);
   const [userAddress, setUserAddress] = React.useState({});
@@ -29,6 +32,12 @@ function Weather() {
     getUsersClientAddress(userLocation, setGetAddressLoading, setUserAddress);
     getWeatherByLocation(userLocation, setGetWeatherLoading, setLocalWeather);
   };
+
+  if (!userLocation) {
+    return (
+      <RetrievingLocation />
+    );
+  }
 
   return (
     <Grid as="section" container justifyContent="center" pt={6}>
