@@ -7,8 +7,6 @@ import { UpdateDataButton, WeatherPaper } from './WeatherStyles';
 
 function Weather() {
   const [userLocation, setUserLocation] = React.useState();
-  console.log("userLocation")
-  console.log(userLocation)
   const [localWeather, setLocalWeather] = React.useState({});
   const [getWeatherLoading, setGetWeatherLoading] = React.useState(false);
   const [userAddress, setUserAddress] = React.useState({});
