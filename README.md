@@ -1,6 +1,10 @@
+# Running
 
-# Run "yarn" to download the dependencies and then "yarn start"
+``$ git clone https://github.com/gabrielmaxgb/get-location-weather.git ``  
+``$ yarn``   
+``$ yarn start``   
 
+> Don't forget to allow location =D     
 
 ## Technologies:
 
@@ -9,6 +13,18 @@
 - Mui Icons
 - Motion
 - Open Weather API
+
+## History
+
+- [x] Install all dependencies
+- [x] Get weather header
+- [x] Weather component
+- [x] Get user location
+- [x] Fetch both API
+- [x] Manage state
+- [x] Display data
+- [x] Loading
+- [x] Ask for location
 
 ## Images
 
