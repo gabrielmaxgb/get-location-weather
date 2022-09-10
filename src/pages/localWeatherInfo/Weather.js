@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import { useEffect, useState } from 'react'
-import DefaultLoading from '../../components/defaultLoading/DefaultLoading';
+import GenericSkeleton from '../../components/genericSkeleton/GenericSkeleton';
 import RetrievingLocation from '../../components/retrievingLocation/RetrievingLocation';
 import { getUsersClientAddress, getWeatherByLocation } from '../../services/weatherApi';
 import { getUserCoords } from '../../utils/getUserCoords';
@@ -45,7 +45,7 @@ function Weather() {
         md={6}
       >
         {
-          getAddressLoading && getWeatherLoading ? <DefaultLoading /> : (
+          getAddressLoading && getWeatherLoading ? <GenericSkeleton /> : (
             <>
               <WeatherPaper>
                 <span>Address: <span>{`${userAddress[0]?.name}, ${userAddress[0]?.state} - ${userAddress[0]?.country}`}</span></span>

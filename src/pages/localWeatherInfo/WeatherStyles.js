@@ -30,4 +30,8 @@ export const UpdateDataButton = styled(Button)`
   margin: 2rem 0 1rem 0;
   font-weight: bold;
   font-size: 1.2rem;
+
+  &:hover {
+    background-color: rgba(102,70,3,1); 
+  }
 `;
