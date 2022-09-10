@@ -7,7 +7,7 @@ import { getUserCoords } from '../../utils/getUserCoords';
 import { UpdateDataButton, WeatherPaper } from './WeatherStyles';
 
 function Weather() {
-  const [userLocation, setUserLocation] = useState();
+  const [userLocation, setUserLocation] = useState(undefined);
   const [localWeather, setLocalWeather] = useState({});
   const [getWeatherLoading, setGetWeatherLoading] = useState(false);
   const [userAddress, setUserAddress] = useState({});
@@ -45,7 +45,14 @@ function Weather() {
         md={6}
       >
         {
-          getAddressLoading && getWeatherLoading ? <GenericSkeleton /> : (
+          getAddressLoading && getWeatherLoading ? (
+            <GenericSkeleton  
+              width="100%"
+              height={27}
+              variant="rectangular"
+              animation="wave"
+            /> 
+          ) : (
             <>
               <WeatherPaper>
                 <span>Address: <span>{`${userAddress[0]?.name}, ${userAddress[0]?.state} - ${userAddress[0]?.country}`}</span></span>
