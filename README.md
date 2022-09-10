@@ -3,7 +3,7 @@
 ## Running
 
 ``$ git clone https://github.com/gabrielmaxgb/get-location-weather.git ``  
-> Navigation to the source location and then:   
+> Navigate to the source location and then:   
 
 ``$ yarn``   
 ``$ yarn start``   
