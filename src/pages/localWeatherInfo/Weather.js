@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import DefaultLoading from '../../components/defaultLoading/DefaultLoading';
 import RetrievingLocation from '../../components/retrievingLocation/RetrievingLocation';
 import { getUsersClientAddress, getWeatherByLocation } from '../../services/weatherApi';
+import { getUserCoords } from '../../utils/getUserCoords';
 import { UpdateDataButton, WeatherPaper } from './WeatherStyles';
 
 function Weather() {
@@ -13,12 +14,7 @@ function Weather() {
   const [getAddressLoading, setGetAddressLoading] = React.useState(false);
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      setUserLocation({
-        lat: position.coords.latitude,
-        lon: position.coords.longitude
-      });
-    });
+    getUserCoords(setUserLocation);
   }, []);
 
   useEffect(() => {
@@ -27,8 +23,7 @@ function Weather() {
   }, [userLocation]);
 
   const handleUpdateClick = () => {
-    getUsersClientAddress(userLocation, setGetAddressLoading, setUserAddress);
-    getWeatherByLocation(userLocation, setGetWeatherLoading, setLocalWeather);
+    getUserCoords(setUserLocation);
   };
 
   if (!userLocation) {
